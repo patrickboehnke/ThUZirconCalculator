@@ -14,10 +14,14 @@ I personally use Enthought Canopy which has a free license and a great academic 
 
 Please put your own data in the Example.csv file in the following format:
 
+The original example data is from the Belfond Dome data provided in reference 2
+
 Column 1: 238U/232Th activity ratio
 Column 2: 1 sigma uncertainty on 238U/232Th activity ratio
 Column 3: 230Th/232Th activity ratio
 Column 4: 1 sigma uncertainty on 230Th/232Th activity ratio
+
+Output will be provided in a file called output_example.csv
 
 If you have problems, questions, or suggestions please contact me at: pboehnke _@_ gmail _._ com (remove _ and spaces)
 
@@ -25,4 +29,6 @@ If you have problems, questions, or suggestions please contact me at: pboehnke _
 
 
 References:
-1) Boehnke, P., Barboni, M., & Bell, E. A. (2015). Zircon U/Th Model Ages in the Presence of Melt Heterogeneity. Quaternary Geochronology, Submitted.
+1) Boehnke, P., Barboni, M., & Bell, E. A. (2016). Zircon U/Th Model Ages in the Presence of Melt Heterogeneity. Quaternary Geochronology, Submitted.
+
+2) Schmitt, A. K., Stockli, D. F., Lindsay, J. M., Robertson, R., Lovera, O. M., & Kislitsyn, R. (2010). Episodic growth and homogenization of plutonic roots in arc volcanoes from combined U-Th and (U-Th)/He zircon dating. Earth and Planetary Science Letters, 295, 91–103. doi:10.1016/j.epsl.2010.03.028
