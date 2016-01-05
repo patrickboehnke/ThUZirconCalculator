@@ -23,6 +23,9 @@ Column 4: 1 sigma uncertainty on 230Th/232Th activity ratio
 
 Output will be provided in a file called output_example.csv
 
+Output values are arranged as m value and one sigma uncertainties (column 1 and 2 respectively).
+m values are explained in reference 3
+
 If you have problems, questions, or suggestions please contact me at: pboehnke _@_ gmail _._ com (remove _ and spaces)
 
 
@@ -32,3 +35,5 @@ References:
 1) Boehnke, P., Barboni, M., & Bell, E. A. (2016). Zircon U/Th Model Ages in the Presence of Melt Heterogeneity. Quaternary Geochronology, Submitted.
 
 2) Schmitt, A. K., Stockli, D. F., Lindsay, J. M., Robertson, R., Lovera, O. M., & Kislitsyn, R. (2010). Episodic growth and homogenization of plutonic roots in arc volcanoes from combined U-Th and (U-Th)/He zircon dating. Earth and Planetary Science Letters, 295, 91–103. doi:10.1016/j.epsl.2010.03.028
+
+3) Schmitt, A. K. (2011). Uranium Series Accessory Crystal Dating of Magmatic Processes. Annual Review of Earth and Planetary Sciences, 39(1), 321–349. doi:10.1146/annurev-earth-040610-133330
