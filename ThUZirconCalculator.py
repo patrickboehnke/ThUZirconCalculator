@@ -19,6 +19,9 @@ import numpy as np
 DUDTh = 7
 DUDThunc = 0.4 #Uncertainty at 1 sigma
 
+#Spread of compiled volcanic data from the equiline at 1 sigma
+EquilineUncertainty = 0.15 #Reported at 1 sigma
+
 #This sets the number of samples for each sample calculation
 #Higher is better but takes longer, 1000 is the default
 NumIterations = 1000
@@ -43,7 +46,7 @@ for iter1 in range(len(U238Th232)):
         Th230Th232Samp = np.random.randn()*Th230Th2321sig[iter1] + Th230Th232[iter1]
         PartCoef = np.random.randn()*DUDThunc + DUDTh
         U238Th232M = U238Th232Samp/PartCoef
-        Th230Th232M = np.random.randn()*0.16*U238Th232M + U238Th232M
+        Th230Th232M = np.random.randn()*EquilineUncertainty*U238Th232M + U238Th232M
         
         Slope = (Th230Th232Samp - Th230Th232M)/(U238Th232Samp - U238Th232M)
         if Slope > 1:
