@@ -51,6 +51,8 @@ for iter1 in range(len(U238Th232)):
         Slope = (Th230Th232Samp - Th230Th232M)/(U238Th232Samp - U238Th232M)
         if Slope > 1:
             NewSlope[iter2] = 1
+        elif Slope < 0:
+            NewSlope[iter2] = 0
         else:
             NewSlope[iter2] = Slope
     ModelSlope[iter1] = np.mean(NewSlope)
