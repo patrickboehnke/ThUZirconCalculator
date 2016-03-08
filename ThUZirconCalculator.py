@@ -19,8 +19,15 @@ import numpy as np
 DUDTh = 7
 DUDThunc = 0.4 #Uncertainty at 1 sigma
 
+#If you want to use a normal distribution put 1 if you want to resample the database put 0
+#We recommend using 1 as it provides a more conservative estimate of the uncertainties
+EquiUncertaintyModel = 1
+
 #Spread of compiled volcanic data from the equiline at 1 sigma
 EquilineUncertainty = 0.15 #Reported at 1 sigma
+
+if EquiUncertaintyModel == 0:
+    EquilineSpread = np.loadtxt("Spread.csv", delimiter=",")
 
 #This sets the number of samples for each sample calculation
 #Higher is better but takes longer, 1000 is the default
@@ -46,7 +53,10 @@ for iter1 in range(len(U238Th232)):
         Th230Th232Samp = np.random.randn()*Th230Th2321sig[iter1] + Th230Th232[iter1]
         PartCoef = np.random.randn()*DUDThunc + DUDTh
         U238Th232M = U238Th232Samp/PartCoef
-        Th230Th232M = np.random.randn()*EquilineUncertainty*U238Th232M + U238Th232M
+        if EquiUncertaintyModel == 1:
+            Th230Th232M = np.random.randn()*EquilineUncertainty*U238Th232M + U238Th232M
+        else:
+            Th230Th232M = U238Th232M + np.random.choice(EquilineSpread)
         
         Slope = (Th230Th232Samp - Th230Th232M)/(U238Th232Samp - U238Th232M)
         if Slope > 1:
